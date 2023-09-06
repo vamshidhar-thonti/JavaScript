@@ -1,0 +1,4 @@
+node_modules
+_MACOSX
+.parcel-cache
+dist

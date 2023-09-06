@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fefeff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%236c30ce' fill-opacity='0.06'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding: 50px;
+  transform: rotate(1deg);
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.first {
+  color: red;
+}
+
+#your-name {
+  /* background-color: rgb(255, 220, 105); */
+  border: 1px solid #444;
+  width: 400px;
+  padding: 5px;
+  /* margin-top: 30px; */
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+input,
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: inherit;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+input {
+  width: 100%;
+  padding-left: 40px;
+  /* display: block; */
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 12px 40px;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, #f32170, #ff6b08);
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#course-image {
+  width: 300px;
+}
+
+#your-name h2 {
+  color: olivedrab;
+}
+
+.icon {
+  font-size: 64px;
+  animation: rotate 0.5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.clip {
+  font-size: 64px;
+  transform: rotate(315deg);
+}
+
+.icons {
+  margin-top: 24px;
+}
