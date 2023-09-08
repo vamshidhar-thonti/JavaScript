@@ -26,12 +26,12 @@ const getQuotes = async function () {
       "https://jacintodesign.github.io/quotes-api/data/quotes.json";
     const result = await fetch(apiURL);
     data = await result.json();
-    console.log(data);
+
     if (!data) throw new Error("Unable to fetch quotes");
 
     renderRandomQuote();
   } catch (error) {
-    console.log(error.message);
+    alert(`${error.message}. Please try again!!`);
   }
 };
 
@@ -58,6 +58,5 @@ const tweetQuote = function () {
 
 btnNewQuote.addEventListener("click", renderRandomQuote);
 btnTwitter.addEventListener("click", tweetQuote);
-window.addEventListener("load", renderRandomQuote);
 
 getQuotes();
