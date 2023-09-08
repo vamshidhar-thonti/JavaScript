@@ -4,17 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+
+    <!-- Font Awesome icons Import -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="nav">
-      <ul>
-        <li>
-          <a href="./JS-Projects/quote-generator/">Quote Generator</a>
-        </li>
-        <li>
-          <a href="./JS-Projects/infinite-scroll/">Infinite Scroll</a>
-        </li>
-      </ul>
-    </div>
+    <header class="header">
+      <a href="#" class="my-name">Vamshidhar Thonti</a>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <span class="hero-text">JavaScript - 20 Web Projects</span>
+        <i class="skull fa-solid fa-skull"></i>
+      </section>
+      <section class="section-project-cards">
+        <a class="project-card" href="./JS-Projects/quote-generator/">
+          <div class="project">
+            <i class="icon fa-solid fa-quote-left"></i>
+            <div class="content-block">
+              <span class="title">Quote Generator</span>
+              <span class="description">
+                Leveraged the free public APIs to fetch a random quote
+                asynchronously for every 'click' event. Twitter button copies
+                the Quote and prompts a tweet ready post on it's platform.
+              </span>
+            </div>
+          </div>
+        </a>
+        <a class="project-card" href="./JS-Projects/infinite-scroll/">
+          <div class="project">
+            <div class="content-block">
+              <span class="title">Infinite Scroll</span>
+              <span class="description">
+                With Unsplash's API, fetches good quality images dynamically.
+                Images load automatically when the scroll almost reaches the
+                last image. It's a clone of instagram's infinity posts scroll.
+              </span>
+            </div>
+            <i class="icon fa-solid fa-infinity"></i>
+          </div>
+        </a>
+      </section>
+    </main>
   </body>
 </html>
