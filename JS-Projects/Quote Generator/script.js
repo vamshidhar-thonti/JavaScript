@@ -9,19 +9,19 @@ const loader = document.querySelector(".loader");
 
 let data = [];
 
-const loading = function () {
+const showLoadingSpinner = function () {
   loader.hidden = false;
   quoteContainer.hidden = true;
 };
 
-const complete = function () {
+const removeLoadingSpinner = function () {
   quoteContainer.hidden = false;
   loader.hidden = true;
 };
 
 const getQuotes = async function () {
   try {
-    loading();
+    showLoadingSpinner();
     const apiURL =
       "https://jacintodesign.github.io/quotes-api/data/quotes.json";
     const result = await fetch(apiURL);
@@ -36,7 +36,7 @@ const getQuotes = async function () {
 };
 
 const renderRandomQuote = function () {
-  loading();
+  showLoadingSpinner();
 
   const randomNumber = Math.trunc(Math.random() * data.length);
   const { author, text } = data[randomNumber];
@@ -48,7 +48,7 @@ const renderRandomQuote = function () {
   // Ṛender texts
   quoteField.textContent = text;
   authorField.textContent = author ?? "Anonymous";
-  complete();
+  removeLoadingSpinner();
 };
 
 const tweetQuote = function () {
