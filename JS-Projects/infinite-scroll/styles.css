@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #845ef7,
+    #5c7cfa,
+    #339af0,
+    #51cf66,
+    #fcc419,
+    #ff922b,
+    #ff6b6b
+  );
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -13,12 +26,27 @@ body {
   background: whitesmoke;
 }
 
+@keyframes slide-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 h1 {
   text-align: center;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   font-size: 4rem;
   letter-spacing: 0.5rem;
+
+  background-image: var(--gradient);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: slide-animation 10s infinite alternate;
 }
 
 /* Loader */

@@ -77,8 +77,29 @@ button:active {
   box-shadow: 0 0.16rem rgba(255, 255, 255, 0.65);
 }
 
-.twitter-button:hover {
-  color: #38a1f3;
+.twitter-button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.twitter-button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #38a1f3;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.twitter-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .fa-twitter {
