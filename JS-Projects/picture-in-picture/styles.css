@@ -20,11 +20,12 @@ body {
 
 .title {
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: #452400;
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
+  text-transform: uppercase;
 }
 
 .body {
@@ -74,7 +75,7 @@ ol li::marker {
 
 @media screen and (max-width: 600px) {
   .title {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .body {

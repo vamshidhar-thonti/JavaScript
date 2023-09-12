@@ -18,7 +18,7 @@ const selectMediaStream = async function () {
   }
 };
 
-// selectMediaStream();
+selectMediaStream();
 
 btn.addEventListener("click", async () => {
   btn.disabled = true;
