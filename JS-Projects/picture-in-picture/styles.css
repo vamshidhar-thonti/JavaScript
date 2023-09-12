@@ -79,6 +79,8 @@ ol li::marker {
 
   .body {
     font-size: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   #button {
