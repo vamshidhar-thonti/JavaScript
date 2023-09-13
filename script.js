@@ -34,6 +34,12 @@ const linkObjects = [
     Speech using a free text to speech API service and then reads
     out the joke every time the button is clicked.`,
   },
+  {
+    link: "./JS-Projects/light-dark-mode/",
+    icon: '<i class="icon fa-solid fa-circle-half-stroke"></i>',
+    title: "Light-Dark Mode",
+    description: `Toggling between Light and Dark Mode themes with just CSS and plain Javascript. Using a set of colors for both themes as variables in CSS and then toggling those brings the theme change effect.`,
+  },
 ];
 
 const generateMarkup = function (object, index) {
