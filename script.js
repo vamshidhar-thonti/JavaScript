@@ -1,6 +1,7 @@
 "use strict";
 
 const projectCardsContainer = document.querySelector(".section-project-cards");
+const heroText = document.querySelector(".hero-text");
 
 const linkObjects = [
   {
@@ -40,7 +41,18 @@ const linkObjects = [
     title: "Light-Dark Mode",
     description: `Toggling between Light and Dark Mode themes with just CSS and plain Javascript. Using a set of colors for both themes as variables in CSS and then toggling those brings the theme change effect.`,
   },
+  {
+    link: "./JS-Projects/animated-template/",
+    icon: '<i class="icon fa-solid fa-toolbox"></i>',
+    title: "Animated Template",
+    description: `It's just a bunch of good looking website templates ready to tweak and deploy with responsive designs included. Using a 3<sup>rd</sup> Party Library called <strong>A</strong>nimate <strong>O</strong>n <strong>S</strong>croll, implementing animation effects is very easy.`,
+  },
 ];
+
+heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(
+  2,
+  "0"
+)} Web Projects`;
 
 const generateMarkup = function (object, index) {
   return `
