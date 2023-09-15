@@ -47,6 +47,12 @@ const linkObjects = [
     title: "Animated Template",
     description: `It's just a bunch of good looking website templates ready to tweak and deploy with responsive designs included. Using a 3<sup>rd</sup> Party Library called <strong>A</strong>nimate <strong>O</strong>n <strong>S</strong>croll, implementing animation effects is very easy.`,
   },
+  {
+    link: "./JS-Projects/animated-navigation/",
+    icon: '<i class="icon fa-solid fa-bars-progress"></i>',
+    title: "Animated Navigation",
+    description: `Demonstration of animating the menu navigation with hamburger styled button. Upon clicking it, the menu options smoothly slide-in and upon re-clicking it, the options slide-out.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(
