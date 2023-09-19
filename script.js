@@ -53,6 +53,12 @@ const linkObjects = [
     title: "Animated Navigation",
     description: `Demonstration of animating the menu navigation with hamburger styled button. Upon clicking it, the menu options smoothly slide-in and upon re-clicking it, the options slide-out.`,
   },
+  {
+    link: "./JS-Projects/music-player/",
+    icon: '<i class="icon fa-solid fa-music"></i>',
+    title: "Music Player",
+    description: `Fun project of implementing a custom music player using JavaScript. The in-built music player is hidden and its controls will be controlled through code. Modern look with responsive design.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(
