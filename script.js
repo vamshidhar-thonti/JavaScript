@@ -65,6 +65,12 @@ const linkObjects = [
     title: "Custom Countdown",
     description: `A countdown timer which starts counting to the target date. Using browser's local storage, even on browser refresh, the count down resumes to the same target date.`,
   },
+  {
+    link: "./JS-Projects/bookmarks-app/",
+    icon: '<i class="icon fa-solid fa-book-bookmark"></i>',
+    title: "Bookmarks App",
+    description: `A simple Bookmarks Web Application which takes URLs from the user and stores it on browser's storage. So, even on browser refresh the bookmarks exist.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(

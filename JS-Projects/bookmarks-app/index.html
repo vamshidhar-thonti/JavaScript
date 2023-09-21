@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design"
+    />
+
+    <!-- Font Awesome icons Import -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS import -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="add-bookmark" id="add-bookmark">Add Bookmark</button>
+    </div>
+    <div class="bookmark-container" id="bookmark-container">
+      <!-- <div class="inner-bookmark-container" hidden>
+        <a class="bookmark" href="#" target="_blank">
+          <span>Bookmark 1</span>
+        </a>
+        <i class="close-icon fa-solid fa-xmark"></i>
+      </div> -->
+    </div>
+
+    <!-- Modal -->
+    <div class="overlay" hidden></div>
+    <div class="modal" hidden>
+      <h3 class="form-title">Add a Bookmark</h3>
+      <form class="add-bookmark-form" action="#">
+        <label for="bookmark-name">Enter Bookmark Name</label>
+        <input
+          type="text"
+          class="bookmark-name"
+          id="bookmark-name"
+          placeholder="Google"
+          required
+        />
+
+        <label for="bookmark-url">Enter Bookmark URL</label>
+        <input
+          type="text"
+          name=""
+          class="bookmark-url"
+          id="bookmark-url"
+          placeholder="google.com"
+          required
+        />
+
+        <input
+          class="submit"
+          type="submit"
+          value="Submit"
+          title="Add a Bookmark"
+        />
+      </form>
+      <i class="close-modal fa-solid fa-xmark"></i>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
