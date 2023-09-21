@@ -59,6 +59,12 @@ const linkObjects = [
     title: "Music Player",
     description: `Fun project of implementing a custom music player using JavaScript. The in-built music player is hidden and its controls will be controlled through code. Modern look with responsive design.`,
   },
+  {
+    link: "./JS-Projects/custom-countdown/",
+    icon: '<i class="icon fa-regular fa-hourglass-half"></i>',
+    title: "Custom Countdown",
+    description: `A countdown timer which starts counting to the target date. Using browser's local storage, even on browser refresh, the count down resumes to the same target date.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(
