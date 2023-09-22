@@ -71,6 +71,12 @@ const linkObjects = [
     title: "Bookmarks App",
     description: `A simple Bookmarks Web Application which takes URLs from the user and stores it on browser's storage. So, even on browser refresh the bookmarks exist.`,
   },
+  {
+    link: "./JS-Projects/video-player/",
+    icon: '<i class="icon fa-solid fa-film"></i>',
+    title: "Video Player",
+    description: `A Custom Video Player with all the important controls like Volume control, Progress seeking, Play/Pause, Playback Speed, Mute/Unmute, Fullscreen Mode. Everything built from scratch.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(

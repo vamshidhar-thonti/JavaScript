@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- New Video Source -- Mixkit -- https://mixkit.co -->
+
+    <!-- Cars on Rainy Street -->
+    <!-- https://assets.mixkit.co/videos/preview/mixkit-cars-heading-through-heavy-rain-27704-large.mp4 -->
+    <!-- Thunderstorm -->
+    <!-- https://assets.mixkit.co/videos/preview/mixkit-thunderstorm-at-night-4422-large.mp4 -->
+    <!-- Car Driving -->
+    <!-- https://assets.mixkit.co/videos/preview/mixkit-highway-in-the-middle-of-a-mountain-range-4633-large.mp4 -->
+    <!-- https://assets.mixkit.co/videos/preview/mixkit-sea-waves-in-a-little-bay-1954-large.mp4 -->
+
+    <div class="player">
+      <video
+        src="https://player.vimeo.com/external/299756227.sd.mp4?s=6ed7dba48ff573e6db1fb37fb38d5ac499f73c23&profile_id=164&oauth2_token_id=57447761"
+        class="video"
+        playsinline
+      ></video>
+
+      <!-- Show Controls -->
+      <div class="show-controls">
+        <!-- Controls Container -->
+        <div class="controls-container">
+          <!-- Progress Bar -->
+          <div class="progress-range" title="Seek">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="control-group">
+            <!-- Left Controls -->
+            <div class="controls-left">
+              <!-- Play/Pause -->
+              <div class="play-controls">
+                <i
+                  class="fas fa-solid fa-play"
+                  id="play-button"
+                  title="Play"
+                ></i>
+              </div>
+              <!-- Volume Controls -->
+              <div class="volume">
+                <div class="volume-icon">
+                  <i
+                    class="fas fa-solid fa-volume-high"
+                    title="Mute"
+                    id="volume-icon"
+                  ></i>
+                </div>
+                <div class="volume-range" title="Change Volume">
+                  <div class="volume-bar"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Controls -->
+            <div class="controls-right">
+              <!-- Speed -->
+              <div class="speed" title="Playback Rate">
+                <select name="playbackRate" id="player-speed">
+                  <option value="0.5">0.5 x</option>
+                  <option value="0.75">0.75 x</option>
+                  <option value="1" selected>1 x</option>
+                  <option value="1.5">1.5 x</option>
+                  <option value="2">2 x</option>
+                </select>
+              </div>
+              <!-- Time -->
+              <div class="time">
+                <span class="time-elapsed">00:00 / </span>
+                <span class="time-duration">2:38</span>
+              </div>
+              <!-- Full Screen Toggle -->
+              <div class="fullscreen">
+                <i class="fullscreen-icon fas fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
