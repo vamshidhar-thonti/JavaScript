@@ -77,6 +77,12 @@ const linkObjects = [
     title: "Video Player",
     description: `A Custom Video Player with all the important controls like Volume control, Progress seeking, Play/Pause, Playback Speed, Mute/Unmute, Fullscreen Mode. Everything built from scratch.`,
   },
+  {
+    link: "./JS-Projects/form-validator/",
+    icon: '<i class="icon fa-brands fa-wpforms"></i>',
+    title: "Form Validation",
+    description: `A simple demonstration of how to validate form's field data using some in-built HTML properties and also using Javascript.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(
