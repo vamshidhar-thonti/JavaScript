@@ -83,6 +83,12 @@ const linkObjects = [
     title: "Form Validation",
     description: `A simple demonstration of how to validate form's field data using some in-built HTML properties and also using Javascript.`,
   },
+  {
+    link: "./JS-Projects/analog-clock/",
+    icon: '<i class="icon fa-regular fa-clock"></i>',
+    title: "Analog Clock",
+    description: `A Fun project where the design and functionality is real-time with a very realistic, attractive design just implemented with HTML, CSS and JavaScript.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(
