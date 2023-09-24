@@ -13,21 +13,20 @@ const updateHands = function () {
   const hh = now.getHours();
 
   const degrees = 360;
-  const half = degrees / 2;
 
-  const totalHours = 24;
+  const totalHours = 12;
   const totalSecondsOrMinutes = 60;
   const totalMilliseconds = 1000;
 
-  const hour = ((hh + mm / totalSecondsOrMinutes) / totalHours) * half;
+  const hour = ((hh + mm / totalSecondsOrMinutes) / totalHours) * degrees;
   const minute =
     ((mm + ss / totalSecondsOrMinutes) / totalSecondsOrMinutes) * degrees;
   const second =
     ((ss + ms / totalMilliseconds) / totalSecondsOrMinutes) * degrees;
 
-  hours.style.transform = `rotateZ(${hour}deg)`;
-  minutes.style.transform = `rotateZ(${minute}deg)`;
-  seconds.style.transform = `rotateZ(${second}deg)`;
+  hours.style.transform = `rotateZ(${hour - 90}deg)`;
+  minutes.style.transform = `rotateZ(${minute - 90}deg)`;
+  seconds.style.transform = `rotateZ(${second - 90}deg)`;
 };
 
 setInterval(updateHands, 1);

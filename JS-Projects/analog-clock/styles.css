@@ -59,22 +59,38 @@ body {
 }
 
 .hours {
-  width: 0.7rem;
-  height: 20%;
+  height: 0.7rem;
+  width: 20%;
   background: #5c373d;
   z-index: 1;
 }
 
 .minutes {
-  width: 0.5rem;
-  height: 40%;
+  height: 0.5rem;
+  width: 40%;
   background: rgb(55, 33, 36, 0.8);
   z-index: 2;
 }
 
 .seconds {
-  width: 0.2rem;
-  height: 45%;
+  height: 0.2rem;
+  width: 45%;
   background: #251618;
+  filter: brightness(120%);
   z-index: 3;
+}
+
+.seconds:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  border-radius: 50px;
+  transform-origin: left;
+  height: 100%;
+  width: 45%;
+  background: #251618;
+  z-index: 1;
+  transition: all 0.1s;
 }
