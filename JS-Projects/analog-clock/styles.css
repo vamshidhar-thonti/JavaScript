@@ -67,7 +67,7 @@ body {
 
 .minutes {
   height: 0.5rem;
-  width: 30%;
+  width: 40%;
   background: rgb(55, 33, 36, 0.8);
   z-index: 2;
 }
