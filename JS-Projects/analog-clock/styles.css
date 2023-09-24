@@ -59,22 +59,22 @@ body {
 }
 
 .hours {
-  height: 0.7rem;
-  width: 20%;
+  width: 0.7rem;
+  height: 20%;
   background: #5c373d;
   z-index: 1;
 }
 
 .minutes {
-  height: 0.5rem;
-  width: 40%;
+  width: 0.5rem;
+  height: 40%;
   background: rgb(55, 33, 36, 0.8);
   z-index: 2;
 }
 
 .seconds {
-  height: 0.2rem;
-  width: 45%;
+  width: 0.2rem;
+  height: 45%;
   background: #251618;
   z-index: 3;
 }

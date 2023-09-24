@@ -25,9 +25,9 @@ const updateHands = function () {
   const second =
     ((ss + ms / totalMilliseconds) / totalSecondsOrMinutes) * degrees;
 
-  hours.style.transform = `rotateZ(${hour - 89.7}deg)`;
-  minutes.style.transform = `rotateZ(${minute - 89.7}deg)`;
-  seconds.style.transform = `rotateZ(${second - 89.7}deg)`;
+  hours.style.transform = `rotateZ(${hour}deg)`;
+  minutes.style.transform = `rotateZ(${minute}deg)`;
+  seconds.style.transform = `rotateZ(${second}deg)`;
 };
 
 setInterval(updateHands, 1);
