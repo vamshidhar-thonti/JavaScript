@@ -70,8 +70,8 @@ body {
 
 .minutes {
   height: 0.5rem;
-  width: 40%;
-  background: rgb(55, 33, 36, 0.8);
+  width: 35%;
+  background: rgb(55, 33, 36);
   z-index: 2;
 }
 
@@ -103,19 +103,27 @@ body {
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
-  color: #765359;
+  font-size: 2.4rem;
   color: #271c1e;
+  text-align: center;
 }
 
 .love {
   background-image: linear-gradient(to bottom left, #af1b4d, #ce4b78, #da789a);
   -webkit-background-clip: text;
   color: transparent;
+  animation: lubDub 1s infinite;
 }
 
-@media screen and (max-width: 600px) {
-  .message {
-    font-size: 1.3rem;
+@keyframes lubDub {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(1.2);
   }
 }
