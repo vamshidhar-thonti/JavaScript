@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 *,
 *::before,
 *::after {
@@ -15,6 +17,7 @@ body {
   display: grid;
   place-items: center;
   background: #c58b94;
+  font-family: "Satisfy", cursive;
 }
 
 .container {
@@ -93,4 +96,26 @@ body {
   background: #251618;
   z-index: 1;
   transition: all 0.1s;
+}
+
+.message {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #765359;
+  color: #271c1e;
+}
+
+.love {
+  background-image: linear-gradient(to bottom left, #af1b4d, #ce4b78, #da789a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .message {
+    font-size: 1.3rem;
+  }
 }
