@@ -84,6 +84,12 @@ const linkObjects = [
     description: `A simple demonstration of how to validate form's field data using some in-built HTML properties and also using Javascript.`,
   },
   {
+    link: "./JS-Projects/spock-rock-game/",
+    icon: '<i class="icon fa-regular fa-hand-spock"></i>',
+    title: "Rock Spock Game",
+    description: `The famous Big Bang Theory TV series game, Rock Paper Scissors Lizard Spock, implemented using JS. used external libraries to get the animated confetti effect when a user win.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
