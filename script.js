@@ -90,6 +90,12 @@ const linkObjects = [
     description: `The famous Big Bang Theory TV series game, Rock Paper Scissors Lizard Spock, implemented using JS. used external libraries to get the animated confetti effect when a user win.`,
   },
   {
+    link: "./JS-Projects/nasa-api-pictures/",
+    icon: '<i class="icon fa-solid fa-rocket"></i>',
+    title: "NASA APOD",
+    description: `NASA puts an "Astronomy Picture Of the Day" everyday which have unique information about space. This project gets random APOD data from the collection and displays on UI. Additionally the specific data can be Added to Favorites for future reference.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
