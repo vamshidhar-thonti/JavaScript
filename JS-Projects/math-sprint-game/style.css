@@ -14,7 +14,7 @@
 body {
   margin: 0;
   font-family: PT Mono, sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   height: 100vh;
