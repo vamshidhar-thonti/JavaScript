@@ -96,6 +96,12 @@ const linkObjects = [
     description: `NASA puts an "Astronomy Picture Of the Day" everyday which have unique information about space. This project gets random APOD data from the collection and displays on UI. Additionally the specific data can be Added to Favorites for future reference.`,
   },
   {
+    link: "./JS-Projects/math-sprint-game/",
+    icon: '<i class="icon fa-solid fa-plus-minus"></i>',
+    title: "Math Sprint Game",
+    description: `Demonstration of usage of radio buttons, timers and scroll functionalities with a game app where random multiplication equations (few correct, few wrong) are displayed.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
