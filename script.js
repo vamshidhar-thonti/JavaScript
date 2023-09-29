@@ -102,6 +102,12 @@ const linkObjects = [
     description: `Demonstration of usage of radio buttons, timers and scroll functionalities with a game app where random multiplication equations (few correct, few wrong) are displayed.`,
   },
   {
+    link: "./JS-Projects/drag-and-drop/",
+    icon: '<i class="icon fa-solid fa-computer-mouse"></i>',
+    title: "Drag and Drop",
+    description: `Implementation of Drag and Drop API to move items across the column sections. Implemented a Simple Kanban Board demonstrating the usage of Drag and Drop feature.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
