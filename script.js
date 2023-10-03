@@ -120,6 +120,12 @@ const linkObjects = [
     description: `Using Figma Mockups, built the splash page which consists of images and styles used from the mockups. Additionally, implemented a logic to change the backgrounds with a button click.`,
   },
   {
+    link: "./JS-Projects/paint-clone/",
+    icon: '<i class="icon fa-solid fa-palette"></i></i>',
+    title: "Paint Clone",
+    description: `The iconic MS Paint Clone using JavaScript. Explored the canvas HTML Element through this project which includes options like saving the drawn image to browser's local storage (can be loaded at a later time). Additionally the drawn canvas can also be saved as JPEG format.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
