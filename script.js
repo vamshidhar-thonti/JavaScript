@@ -108,6 +108,12 @@ const linkObjects = [
     description: `Implementation of Drag and Drop API to move items across the column sections. Implemented a Simple Kanban Board demonstrating the usage of Drag and Drop feature.`,
   },
   {
+    link: "./JS-Projects/calculator/",
+    icon: '<i class="icon fa-solid fa-calculator"></i>',
+    title: "Calculator",
+    description: `Implementation of the basic calculator functionality using Javascript. Used CSS grids to arrange the calculator buttons.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
