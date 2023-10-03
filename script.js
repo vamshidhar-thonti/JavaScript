@@ -114,6 +114,12 @@ const linkObjects = [
     description: `Implementation of the basic calculator functionality using Javascript. Used CSS grids to arrange the calculator buttons.`,
   },
   {
+    link: "./JS-Projects/splash-page/",
+    icon: '<i class="icon fa-solid fa-wand-magic-sparkles"></i>',
+    title: "Splash Page",
+    description: `Using Figma Mockups, built the splash page which consists of images and styles used from the mockups. Additionally, implemented a logic to change the backgrounds with a button click.`,
+  },
+  {
     link: "./JS-Projects/analog-clock/",
     icon: '<i class="icon fa-regular fa-clock"></i>',
     title: "Analog Clock",
