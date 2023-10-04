@@ -26,6 +26,28 @@ body {
   padding: 2rem 4rem;
   font-size: 2.4rem;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.source-code:visited,
+.source-code:link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #b52626;
+  transition: all 0.5s;
+}
+
+.source-code:hover,
+.source-code:active {
+  outline: none;
+  transform: scale(1.05);
+  filter: brightness(110%);
+}
+
+.github-icon {
+  font-size: 4rem;
 }
 
 .my-name:link,
@@ -129,6 +151,50 @@ body {
   text-align: justify;
 }
 
+/* Footer */
+.footer {
+  width: 100%;
+  height: 30rem;
+  background: #651515;
+  color: #ffe3e3;
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me {
+  grid-column: 1 / span 2;
+}
+
+.about-me h2 {
+  font-size: 3rem;
+}
+
+.about-me-text {
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.connect {
+  font-size: 4rem;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect-link:visited,
+.connect-link:link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Media Queries for smartphone screens */
 @media screen and (max-width: 600px) {
   .my-name:link,
@@ -144,6 +210,10 @@ body {
   .header {
     margin: 1rem;
     padding: 1rem;
+  }
+
+  .github-icon {
+    font-size: 3rem;
   }
 
   .section-project-cards {
@@ -183,5 +253,30 @@ body {
     top: 0;
     left: 2px;
     transform: translateY(-1.8rem) rotate(-10deg) scale(1.8);
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .about-me {
+    grid-column: 1 / span 3;
+  }
+
+  .about-me h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-me-text {
+    font-size: 1.2rem;
+  }
+
+  .connect {
+    font-size: 2.4rem;
+    gap: 1rem;
+    flex-direction: column;
   }
 }
