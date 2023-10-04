@@ -276,7 +276,7 @@ body {
 
   .connect {
     font-size: 2.4rem;
-    gap: 1rem;
+    gap: 2.4rem;
     flex-direction: column;
   }
 }
