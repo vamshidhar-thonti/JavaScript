@@ -121,9 +121,15 @@ const linkObjects = [
   },
   {
     link: "./JS-Projects/paint-clone/",
-    icon: '<i class="icon fa-solid fa-palette"></i></i>',
+    icon: '<i class="icon fa-solid fa-palette"></i>',
     title: "Paint Clone",
     description: `The iconic MS Paint Clone using JavaScript. Explored the canvas HTML Element through this project which includes options like saving the drawn image to browser's local storage (can be loaded at a later time). Additionally the drawn canvas can also be saved as JPEG format.`,
+  },
+  {
+    link: "./JS-Projects/pong/",
+    icon: '<i class="icon fa-solid fa-table-tennis-paddle-ball"></i>',
+    title: "Pong Game",
+    description: `The classic old Pong game built using Javascript. Learnt how to make the animations look smooth on the screen.`,
   },
   {
     link: "./JS-Projects/analog-clock/",
