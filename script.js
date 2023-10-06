@@ -137,6 +137,12 @@ const linkObjects = [
     title: "Analog Clock",
     description: `A Fun project where the design and functionality is real-time with a very realistic, attractive design just implemented with HTML, CSS and JavaScript.`,
   },
+  {
+    link: "./JS-Projects/password-checker/",
+    icon: '<i class="icon fa-solid fa-lock-open"></i>',
+    title: "Password Checker",
+    description: `haveibeenpwned.com provides a list of passwords that breached till date. Given a password it returns leaked count. Now to make our password safe, the input password will be encrypted and part of the encrypted result will be sent as a request which makes it difficult to identify the actual password at the server.`,
+  },
 ];
 
 heroText.textContent = `JavaScript - ${String(linkObjects.length).padStart(

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Checker</title>
+
+    <!-- CSS import -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <h1>Do you think your password was ever exposed?</h1>
+        <div class="app-text">
+          Enter anything in the below text field and hit enter. We can find it
+          out...
+          <div class="result"></div>
+        </div>
+        <form class="inputs">
+          <input
+            type="text"
+            class="text-input"
+            id="text-input"
+            placeholder="Password123"
+            required
+          />
+          <button class="submit" id="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <span>
+        The API used here is from
+        <a href="https://haveibeenpwned.com/API/v3" target="_blank"
+          >haveibeenpwned.com</a
+        >
+      </span>
+    </div>
+    <!-- JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
