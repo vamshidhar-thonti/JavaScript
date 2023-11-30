@@ -19,7 +19,6 @@ const expandMessages = function (event) {
   const childMessageEl = parent.querySelector(".messages");
 
   childMessageEl.classList.toggle("hidden");
-  console.log(this);
   this.classList.toggle("icon-rot-90");
 };
 
@@ -37,7 +36,6 @@ const fetchRPData = async function (searchString, limit) {
       }
     );
     fetchedData = await response.json();
-    console.log(fetchedData);
 
     displayData();
     loading.classList.add("hidden");
@@ -47,6 +45,7 @@ const fetchRPData = async function (searchString, limit) {
 };
 
 const displayData = function () {
+  result.innerHTML = "";
   for (const key in fetchedData) {
     if (fetchedData.hasOwnProperty(key)) {
       let messageDiv = "";
