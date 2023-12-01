@@ -85,7 +85,7 @@ const displayData = function () {
           </div>
         </div>
       `;
-      result.insertAdjacentHTML("afterbegin", parentDiv);
+      result.insertAdjacentHTML("beforeend", parentDiv);
 
       const btnExpand = document.querySelectorAll(".icon");
       btnExpand.forEach((btn) => {
