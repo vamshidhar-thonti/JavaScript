@@ -49,7 +49,15 @@ const displayData = function () {
   for (const key in fetchedData) {
     if (fetchedData.hasOwnProperty(key)) {
       let messageDiv = "";
-      for (const message of fetchedData[key]["contexts"]) {
+      for (let message of fetchedData[key]["contexts"]) {
+        message = message
+          .replaceAll("\n", " ")
+          .replaceAll("GURUJI", "<br /><strong>GURUJI</strong>")
+          .replaceAll("DEVOTEE", "<br /><strong>DEVOTEE</strong>");
+        message = message.replace(
+          "<br /><strong>DEVOTEE</strong>",
+          "<strong>DEVOTEE</strong>"
+        );
         messageDiv += `
         <div class="message">
           ${message}
@@ -60,21 +68,15 @@ const displayData = function () {
         <div class="output" id="output">
           <div class="parent">
             <div class="source" id="source">
-              ${key}
+              <strong>${key}</strong>
             </div>
             <div class="parent-center">
-              <span>
-                English Link:
-                <a href="${fetchedData[key]["sources"]["english_link"]}" class="english-link" id="english-link" target="_blank">
-                  ${fetchedData[key]["sources"]["english_link"]}
-                </a>
-              </span>
-              <span>
-                Telugu Link:
-                <a href="${fetchedData[key]["sources"]["telugu_link"]}" class="telugu-link" id="telugu-link" target="_blank">
-                ${fetchedData[key]["sources"]["telugu_link"]}
-                </a>
-              </span>
+              <a href="${fetchedData[key]["sources"]["english_link"]}" class="english-link" id="english-link" target="_blank">
+                English Article Link
+              </a>
+              <a href="${fetchedData[key]["sources"]["telugu_link"]}" class="telugu-link" id="telugu-link" target="_blank">
+                Telugu Article Link
+              </a>
             </div>
             <i class="icon fa-regular fa-circle-xmark"></i>
           </div>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 :root {
   --primary-color: #228be6;
@@ -54,7 +55,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-size: 4rem;
+  font-size: 5rem;
+  font-family: 'Oswald', sans-serif;
 
   background-image: var(--gradient);
   background-size: 300%;
@@ -100,6 +102,8 @@ body {
   background: var(--primary-color);
   color: var(--font-color-light);
   cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1.4px;
 }
 
 .submit-button:hover {
@@ -170,7 +174,7 @@ body {
   padding: 2rem;
   border-radius: 5px;
   background: var(--font-color-light);
-  line-height: 1.2;
+  line-height: 1.8;
   margin-top: 1.4rem;
 }
 
@@ -192,7 +196,7 @@ body {
 
 /* Loading */
 .loading {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -236,7 +240,7 @@ body {
   }
 
   .container .main-heading {
-    font-size: 2rem;
+    font-size: 3.2rem;
   }
 
   #search-form {
@@ -268,7 +272,7 @@ body {
   .parent {
     flex-direction: column;
     gap: 1.4rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 1rem;
   }
 
@@ -276,13 +280,11 @@ body {
     gap: 0.4rem;
     width: 100%;
     height: auto;
-    font-size: 1rem;
-    margin: 0.4rem auto;
-    word-wrap: break-word;
-  }
-
-  .parent-center span {
-    text-wrap: wrap;
+    font-size: 1.4rem;
+    flex-direction: row;
+    margin-left: 0;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .icon {
@@ -290,13 +292,15 @@ body {
   }
 
   .messages {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .messages .message {
     padding: 1rem;
-    line-height: 1;
+    line-height: 1.6;
     margin-top: 1rem;
   }
 
@@ -305,6 +309,7 @@ body {
   .telugu-link:link,
   .telugu-link:visited {
     padding: 0.4rem;
+    text-decoration: underline;
   }
 
   .english-link:hover,
