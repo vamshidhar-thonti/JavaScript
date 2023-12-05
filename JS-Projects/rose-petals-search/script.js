@@ -69,14 +69,14 @@ const displayData = function () {
           <div class="parent">
             <div class="source" id="source">
               <strong>${key}</strong>
-            </div>
-            <div class="parent-center">
-              <a href="${fetchedData[key]["sources"]["english_link"]}" class="english-link" id="english-link" target="_blank">
+              <div class="parent-center">
+                <a href="${fetchedData[key]["sources"]["english_link"]}" class="english-link" id="english-link" target="_blank">
                 English Article Link
-              </a>
-              <a href="${fetchedData[key]["sources"]["telugu_link"]}" class="telugu-link" id="telugu-link" target="_blank">
+                </a>
+                <a href="${fetchedData[key]["sources"]["telugu_link"]}" class="telugu-link" id="telugu-link" target="_blank">
                 Telugu Article Link
-              </a>
+                </a>
+              </div>
             </div>
             <i class="icon fa-regular fa-circle-xmark"></i>
           </div>
