@@ -10,7 +10,8 @@ const errorPopup = document.querySelector(".popup");
 const errorContent = document.querySelector(".error-content");
 const btnErrorClose = document.querySelector(".error-close-icon");
 
-const RP_SEARCH_URL = "http://127.0.0.1:8000/api/v1/rose_petals_search/";
+const RP_SEARCH_URL =
+  "https://rp-search.onrender.com/api/v1/rose_petals_search/";
 const RP_API_KEY = "DEFAULT_API_KEY";
 
 let fetchedData = {};
