@@ -6,9 +6,11 @@ const textInput = document.querySelector("#text-field");
 const limitInput = document.querySelector("#limit-field");
 const result = document.querySelector(".result");
 const loading = document.querySelector(".loading");
+const errorPopup = document.querySelector(".popup");
+const errorContent = document.querySelector(".error-content");
+const btnErrorClose = document.querySelector(".error-close-icon");
 
-const RP_SEARCH_URL =
-  "https://rp-search.onrender.com/api/v1/rose_petals_search/";
+const RP_SEARCH_URL = "http://127.0.0.1:8000/api/v1/rose_petals_search/";
 const RP_API_KEY = "DEFAULT_API_KEY";
 
 let fetchedData = {};
@@ -25,7 +27,6 @@ const expandMessages = function (event) {
 const fetchRPData = async function (searchString, limit) {
   try {
     loading.classList.remove("hidden");
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     const response = await fetch(
       `${RP_SEARCH_URL}?q=${searchString}&top_n=${limit}`,
       {
@@ -36,11 +37,25 @@ const fetchRPData = async function (searchString, limit) {
       }
     );
     fetchedData = await response.json();
+    if (!response.ok) {
+      throw new Error(`${response.status}: ${fetchedData["detail"]}`);
+    }
 
     displayData();
-    loading.classList.add("hidden");
   } catch (error) {
+    displayErrorPopup();
     console.log(error);
+  } finally {
+    loading.classList.add("hidden");
+  }
+};
+
+const displayErrorPopup = function () {
+  if (fetchedData.hasOwnProperty("detail")) {
+    console.log(fetchedData);
+    errorContent.textContent = fetchedData["detail"];
+    errorPopup.classList.remove("hide-popup");
+    setTimeout(hidePopup, 10 * 1000);
   }
 };
 
@@ -103,4 +118,9 @@ const submitForm = function (event) {
   }
 };
 
+const hidePopup = function () {
+  errorPopup.classList.add("hide-popup");
+};
+
 searchForm.addEventListener("submit", submitForm);
+btnErrorClose.addEventListener("click", hidePopup);
