@@ -39,7 +39,7 @@ const fetchRPData = async function (searchString, limit) {
     );
     fetchedData = await response.json();
     if (!response.ok) {
-      throw new Error(`${response.status}: ${fetchedData["detail"]}`);
+      throw new Error(fetchedData);
     }
 
     displayData();
@@ -52,12 +52,14 @@ const fetchRPData = async function (searchString, limit) {
 };
 
 const displayErrorPopup = function () {
+  // console.log(fetchedData);
   if (fetchedData.hasOwnProperty("detail")) {
-    console.log(fetchedData);
     errorContent.textContent = fetchedData["detail"];
-    errorPopup.classList.remove("hide-popup");
-    setTimeout(hidePopup, 10 * 1000);
+  } else if (fetchedData.hasOwnProperty("error")) {
+    errorContent.textContent = `${fetchedData["error"]}. Please try again after a minute.`;
   }
+  errorPopup.classList.remove("hide-popup");
+  setTimeout(hidePopup, 10 * 1000); // timeout after 10 seconds
 };
 
 const displayData = function () {
