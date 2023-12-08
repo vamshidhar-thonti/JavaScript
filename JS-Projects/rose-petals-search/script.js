@@ -71,7 +71,8 @@ const displayData = function () {
         message = message
           .replaceAll("\n", " ")
           .replaceAll("GURUJI", "<br /><strong>GURUJI</strong>")
-          .replaceAll("DEVOTEE", "<br /><strong>DEVOTEE</strong>");
+          .replaceAll("DEVOTEE", "<br /><strong>DEVOTEE</strong>")
+          .replaceAll(" - ", "");
         message = message.replace(
           "<br /><strong>DEVOTEE</strong>",
           "<strong>DEVOTEE</strong>"
