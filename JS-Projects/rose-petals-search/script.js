@@ -77,9 +77,16 @@ const displayData = function () {
           "<strong>DEVOTEE</strong>"
         );
         messageDiv += `
-        <div class="message">
-          ${message}
-        </div>
+          <div class="message-container">
+            <div class="message">
+              ${message}
+            </div>
+            <div class="copy-text" id="copy-text">
+              Copy Text
+              <i class="fa-regular fa-copy"></i>
+              <div class="copy-text-tooltip toottip-hidden">Copied</div>
+            </div>
+          </div>
         `;
       }
       const parentDiv = `
@@ -109,6 +116,11 @@ const displayData = function () {
       btnExpand.forEach((btn) => {
         btn.addEventListener("click", expandMessages);
       });
+
+      const btnCopyText = document.querySelectorAll("#copy-text");
+      btnCopyText.forEach((btn) => {
+        btn.addEventListener("click", copyTextToClipboard);
+      });
     }
   }
 };
@@ -123,6 +135,29 @@ const submitForm = function (event) {
 
 const hidePopup = function () {
   errorPopup.classList.add("hide-popup");
+};
+
+const copyTextToClipboard = function () {
+  const messageContainer = this.closest(".message-container");
+  const relativeMessageDiv = messageContainer.querySelector(".message");
+  const copyTextTooltip = messageContainer
+    .querySelector(".copy-text")
+    .querySelector(".copy-text-tooltip");
+
+  // Copy the text inside the div
+  navigator.clipboard.writeText(
+    relativeMessageDiv.textContent
+      .replace(/[\n\r]+|[\s]{2,}/g, " ")
+      .trim()
+      .replaceAll("DEVOTEE", "\nDEVOTEE")
+      .replaceAll("GURUJI", "\nGURUJI")
+      .replace("\nDEVOTEE", "DEVOTEE")
+  );
+
+  copyTextTooltip.classList.remove("toottip-hidden");
+  setTimeout(() => {
+    copyTextTooltip.classList.add("toottip-hidden");
+  }, 2 * 1000);
 };
 
 searchForm.addEventListener("submit", submitForm);
