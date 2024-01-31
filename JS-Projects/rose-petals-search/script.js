@@ -42,7 +42,7 @@ const fetchRPData = async function (searchString, limit) {
       throw new Error(fetchedData);
     }
 
-    displayData();
+    displayData(searchString);
   } catch (error) {
     displayErrorPopup();
     console.log(error);
@@ -62,12 +62,28 @@ const displayErrorPopup = function () {
   setTimeout(hidePopup, 10 * 1000); // timeout after 10 seconds
 };
 
-const displayData = function () {
+const displayData = function (searchString) {
   result.innerHTML = "";
+  const searchStrings = searchString
+    .split(" ")
+    .map((string) => string.toLowerCase());
   for (const key in fetchedData) {
     if (fetchedData.hasOwnProperty(key)) {
       let messageDiv = "";
       for (let message of fetchedData[key]["contexts"]) {
+        for (let string of searchStrings) {
+          message = message
+            .replaceAll(
+              string,
+              `<span class="content-highlighter">${string}</span>`
+            )
+            .replaceAll(
+              string.charAt(0).toUpperCase() + string.slice(1),
+              `<span class="content-highlighter">${
+                string.charAt(0).toUpperCase() + string.slice(1)
+              }</span>`
+            );
+        }
         message = message
           .replaceAll("\n", " ")
           .replaceAll("GURUJI", "<br /><strong>GURUJI</strong>")
